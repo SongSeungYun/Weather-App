@@ -1,0 +1,93 @@
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.locationInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weatherIcon {
+  width: 80px;
+  height: 80px;
+  background: #fff3e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherIcon img {
+  width: 60px;
+  height: 60px;
+}
+
+.locationDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.location {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #333;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .temperature {
+    font-size: 3rem;
+  }
+  
+  .weatherIcon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .weatherIcon img {
+    width: 40px;
+    height: 40px;
+  }
+}

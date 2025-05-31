@@ -1,0 +1,38 @@
+.button {
+  background: white;
+  border: 2px solid #e91e63;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e91e63;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.button:hover {
+  background: #fce4ec;
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.selected {
+  background: #e91e63;
+  color: white;
+}
+
+.selected:hover {
+  background: #c2185b;
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    min-width: 80px;
+  }
+}

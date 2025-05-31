@@ -1,0 +1,131 @@
+.container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.dayContainer {
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 0.5rem;
+}
+
+.dayContainer:last-child {
+  border-bottom: none;
+}
+
+.dayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dayHeader:hover {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 -1rem;
+}
+
+.dayName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.expandIcon {
+  color: #e91e63;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.hourlyContainer {
+  padding: 0 1rem 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.hourlyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hourlyItem:last-child {
+  border-bottom: none;
+}
+
+.hourlyTime {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 120px;
+}
+
+.hourlyIcon {
+  width: 40px;
+  height: 40px;
+  background: #fff3e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hourlyIcon img {
+  width: 30px;
+  height: 30px;
+}
+
+.hourlyTemp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.temp {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .hourlyItem {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .hourlyTime,
+  .hourlyTemp {
+    min-width: auto;
+    align-items: center;
+  }
+}

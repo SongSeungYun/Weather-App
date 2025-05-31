@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.titleAccent {
+  color: #e91e63;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.cityGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.illustration {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.earth {
+  font-size: 8rem;
+  animation: rotate 20s linear infinite;
+}
+
+.cloud1,
+.cloud2 {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cloud1 {
+  top: -2rem;
+  left: -3rem;
+  animation-delay: 0s;
+}
+
+.cloud2 {
+  top: 1rem;
+  right: -3rem;
+  animation-delay: 1.5s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .cityGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .earth {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cityGrid {
+    grid-template-columns: 1fr;
+  }
+}
