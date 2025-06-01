@@ -6,6 +6,7 @@ import WeatherCard from '../components/WeatherCard/WeatherCard';
 import ForecastList from '../components/ForecastList/ForecastList';
 import { GET_WEATHER_DATA } from '../graphql/queries';
 import styles from './city.module.css';
+import Image from 'next/image';
 
 function CityWeather() {
   const router = useRouter();
@@ -45,13 +46,24 @@ function CityWeather() {
     <Layout title={`${city} 날씨`}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.earthIcon}>🌍</div>
+          <div className={styles.illustration}>
+            <Image 
+              src="/earth.png"
+              alt="Earth illustration"
+              width={68}
+              height={51}
+              className={styles.earth}
+            />
+          </div>
           <h1 className={styles.title}>Weather Information for {city}</h1>
         </div>
         
         {data && (
           <>
-            <WeatherCard weather={data.getWeatherData.current} />
+            <WeatherCard 
+              weather={data.getWeatherData.current} 
+              cityName={city}
+            />
             <ForecastList forecast={data.getWeatherData.forecast} />
           </>
         )}

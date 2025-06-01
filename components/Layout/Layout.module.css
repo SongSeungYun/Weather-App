@@ -1,15 +1,13 @@
+/*components/Layout/Layout.module.css*/
 .container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  background: white; /* FAF7F5에서 white로 변경 */
 }
 
 .main {
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* 반응형 레이아웃 */
 @media (min-width: 1280px) {
   .main {
     max-width: 1200px;
@@ -25,9 +23,12 @@
 }
 
 @media (max-width: 799px) {
+  .container {
+    overflow-x: auto; /* 여기로 이동 */
+  }
+  
   .main {
     min-width: 800px;
-    overflow-x: auto;
     padding: 1rem;
   }
 }

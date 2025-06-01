@@ -1,3 +1,4 @@
+/*components/ForecastList/ForecastList.module.css*/
 .container {
   background: white;
   border-radius: 16px;
@@ -80,7 +81,7 @@
 .hourlyIcon {
   width: 40px;
   height: 40px;
-  background: #fff3e0;
+  background: #F2C8C4;
   border-radius: 50%;
   display: flex;
   align-items: center;

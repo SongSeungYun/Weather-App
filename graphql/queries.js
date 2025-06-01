@@ -4,7 +4,6 @@ export const GET_WEATHER_DATA = gql`
   query GetWeatherData($city: String!) {
     getWeatherData(city: $city) {
       current {
-        city
         country
         temperature
         feelsLike
@@ -13,6 +12,7 @@ export const GET_WEATHER_DATA = gql`
         windSpeed
         icon
         dateTime
+        population
       }
       forecast {
         date

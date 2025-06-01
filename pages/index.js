@@ -3,6 +3,7 @@ import createApolloClient from '../lib/apollo-client';
 import Layout from '../components/Layout/Layout';
 import CityButton from '../components/CityButton/CityButton';
 import styles from './index.module.css';
+import Image from 'next/image';
 
 const cities = ['Seoul', 'Tokyo', 'Paris', 'London'];
 
@@ -30,9 +31,13 @@ export default function Home() {
           </div>
           
           <div className={styles.illustration}>
-            <div className={styles.earth}>🌍</div>
-            <div className={styles.cloud1}>☁️</div>
-            <div className={styles.cloud2}>☁️</div>
+            <Image 
+              src="/earth.png"
+              alt="Earth illustration"
+              width={430}
+              height={321}
+              className={styles.earth}
+            />
           </div>
         </div>
       </Layout>

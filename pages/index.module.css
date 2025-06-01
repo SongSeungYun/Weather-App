@@ -46,36 +46,8 @@
 
 .earth {
   font-size: 8rem;
-  animation: rotate 20s linear infinite;
 }
 
-.cloud1,
-.cloud2 {
-  position: absolute;
-  font-size: 2rem;
-  animation: float 3s ease-in-out infinite;
-}
-
-.cloud1 {
-  top: -2rem;
-  left: -3rem;
-  animation-delay: 0s;
-}
-
-.cloud2 {
-  top: 1rem;
-  right: -3rem;
-  animation-delay: 1.5s;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @keyframes float {
   0%, 100% {

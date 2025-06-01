@@ -2,7 +2,6 @@ import { gql } from 'apollo-server-micro';
 
 export const typeDefs = gql`
   type CurrentWeather {
-    city: String!
     country: String!
     temperature: Int!
     feelsLike: Int!
@@ -11,6 +10,7 @@ export const typeDefs = gql`
     windSpeed: Float!
     icon: String!
     dateTime: String!
+    population: Int!
   }
   
   type HourlyForecast {

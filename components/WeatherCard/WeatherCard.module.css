@@ -1,3 +1,4 @@
+/*components/WeatherCard/WeatherCard.module.css*/
 .card {
   background: white;
   border-radius: 16px;
@@ -7,78 +8,90 @@
   border: 1px solid #e0e0e0;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.locationInfo {
+.container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
+/* 왼쪽: 날씨 아이콘 */
 .weatherIcon {
+  flex-shrink: 0;
   width: 80px;
   height: 80px;
-  background: #fff3e0;
+  background: #F2C8C4;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.weatherIcon img {
-  width: 60px;
-  height: 60px;
-}
-
-.locationDetails {
+/* 중간: 위치 정보 */
+.locationInfo {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
-.date {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 0.25rem;
+.dateTime {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
 }
 
-.location {
-  font-size: 1.5rem;
+.locationRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cityName {
+  font-size: 1.3rem;
   font-weight: 600;
   color: #333;
 }
 
-.temperature {
-  font-size: 4rem;
-  font-weight: 300;
-  color: #333;
+.population {
+  font-size: 0.9rem;
+  color: #666;
 }
 
-.details {
+/* 오른쪽: 온도 정보 */
+.temperatureSection {
+  flex-shrink: 0;
+  text-align: right;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.5rem;
-  color: #666;
-  font-size: 0.95rem;
 }
 
+.mainTemperature {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #333;
+  line-height: 1;
+}
+
+.additionalInfo {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: right;
+  max-width: 300px;
+  line-height: 1.3;
+}
+
+/* 반응형 디자인 */
 @media (max-width: 768px) {
   .card {
     padding: 1.5rem;
   }
   
-  .header {
+  .container {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
-  }
-  
-  .temperature {
-    font-size: 3rem;
+    gap: 1.5rem;
   }
   
   .weatherIcon {
@@ -86,8 +99,43 @@
     height: 60px;
   }
   
-  .weatherIcon img {
-    width: 40px;
-    height: 40px;
+  .locationInfo {
+    align-items: center;
+  }
+  
+  .locationRow {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .temperatureSection {
+    align-items: center;
+  }
+  
+  .mainTemperature {
+    font-size: 3rem;
+  }
+  
+  .additionalInfo {
+    text-align: center;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 1rem;
+  }
+  
+  .mainTemperature {
+    font-size: 2.5rem;
+  }
+  
+  .dateTime {
+    font-size: 1rem;
+  }
+  
+  .cityName {
+    font-size: 1.1rem;
   }
 }
