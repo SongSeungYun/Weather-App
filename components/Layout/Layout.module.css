@@ -1,34 +1,41 @@
 /*components/Layout/Layout.module.css*/
 .container {
   min-height: 100vh;
-  background: white; /* FAF7F5에서 white로 변경 */
+  background: #FAF7F5;
 }
 
 .main {
   padding: 2rem;
 }
 
-@media (min-width: 1280px) {
+/* 1280px 초과: 화면 가운데 위치, 최대 1280px */
+@media (min-width: 1281px) {
   .main {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
+    width: 1280px;
   }
 }
 
-@media (min-width: 800px) and (max-width: 1279px) {
+/* 800px 이상 1280px 이하: 화면 width 100% 차지 */
+@media (min-width: 800px) and (max-width: 1280px) {
   .main {
     width: 100%;
+    margin: 0;
     padding: 2rem 20px;
   }
 }
 
+/* 800px 미만: 고정 크기, 스크롤 */
 @media (max-width: 799px) {
   .container {
-    overflow-x: auto; /* 여기로 이동 */
+    overflow-x: auto;
   }
   
   .main {
     min-width: 800px;
+    width: 800px;
+    margin: 0;
     padding: 1rem;
   }
 }

@@ -1,4 +1,3 @@
-/*components/WeatherCard/WeatherCard.module.css*/
 .card {
   background: white;
   border-radius: 16px;
@@ -6,12 +5,17 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
   border: 1px solid #e0e0e0;
+  height: 140px;
+  display: flex;
+  align-items: center;
 }
 
 .container {
   display: flex;
   align-items: center;
   gap: 2rem;
+  width: 100%;
+  height: 100%;
 }
 
 /* 왼쪽: 날씨 아이콘 */
@@ -19,7 +23,7 @@
   flex-shrink: 0;
   width: 80px;
   height: 80px;
-  background: #F2C8C4;
+  background: #FFB6C1;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -32,6 +36,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  height: 100%;
+  justify-content: center;
 }
 
 .dateTime {
@@ -64,7 +70,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
   gap: 0.5rem;
+  height: 100%;
 }
 
 .mainTemperature {
@@ -82,15 +90,29 @@
   line-height: 1.3;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
+/* 1280px 이상: 고정 너비 */
+/* 1280px 초과: 부모 컨테이너에 맞춤 (최대 1280px) */
+@media (min-width: 1280px) {
   .card {
+    width: 100%;
+  }
+}
+
+/* 800px 이상 1280px 이하: 100% 너비 */
+@media (min-width: 800px) and (max-width: 1280px) {
+  .card {
+    width: 100%;
+  }
+}
+
+/* 800px 미만: 부모 컨테이너에 맞춤 */
+@media (max-width: 799px) {
+  .card {
+    width: 100%;
     padding: 1.5rem;
   }
   
   .container {
-    flex-direction: column;
-    text-align: center;
     gap: 1.5rem;
   }
   
@@ -99,43 +121,7 @@
     height: 60px;
   }
   
-  .locationInfo {
-    align-items: center;
-  }
-  
-  .locationRow {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-  
-  .temperatureSection {
-    align-items: center;
-  }
-  
   .mainTemperature {
     font-size: 3rem;
-  }
-  
-  .additionalInfo {
-    text-align: center;
-    max-width: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    gap: 1rem;
-  }
-  
-  .mainTemperature {
-    font-size: 2.5rem;
-  }
-  
-  .dateTime {
-    font-size: 1rem;
-  }
-  
-  .cityName {
-    font-size: 1.1rem;
   }
 }

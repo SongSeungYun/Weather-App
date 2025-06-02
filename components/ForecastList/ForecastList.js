@@ -26,9 +26,14 @@ export default function ForecastList({ forecast }) {
             onClick={() => toggleDay(dayIndex)}
           >
             <span className={styles.dayName}>{day.dateFormatted}</span>
-            <span className={styles.expandIcon}>
-              {expandedDays.has(dayIndex) ? '▲' : '▼'}
-            </span>
+            <div className={styles.expandIcon}>
+              <Image
+                src={expandedDays.has(dayIndex) ? '/up.png' : '/down.png'}
+                alt={expandedDays.has(dayIndex) ? 'Collapse' : 'Expand'}
+                width={24}
+                height={24}
+              />
+            </div>
           </div>
           
           {expandedDays.has(dayIndex) && (
