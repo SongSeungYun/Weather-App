@@ -36,7 +36,7 @@ OpenWeather API: 외부 날씨 데이터
    
 ```
 git clone https://github.com/SongSeungYun/Weather-App.git
-cd weather-app
+cd Weather-App
 ```
 
 2. 의존성 설치
