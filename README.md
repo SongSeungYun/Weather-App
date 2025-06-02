@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Weather App
+Next.js, GraphQL, Apollo Client를 활용한 실시간 날씨 정보 애플리케이션
 
-## Getting Started
+## 🌟 프로젝트 개요
+OpenWeather API를 통해 실시간 날씨 정보를 제공하는 웹 애플리케이션입니다.
 
-First, run the development server:
+## 🚀 주요 기능
+실시간 날씨 정보: 현재 날씨, 체감온도, 습도, 풍속 제공
 
-```bash
-npm run dev
-# or
-yarn dev
+5일 예보: 시간별 상세 예보 정보
+
+다중 도시 지원: Seoul, Tokyo, Paris, London
+
+아코디언 UI: 날짜별 예보 펼치기/접기 기능
+
+## 🛠️ 기술 스택
+Frontend
+Next.js 12: React 프레임워크, 파일 기반 라우팅
+
+Apollo Client: GraphQL 클라이언트, 상태 관리
+
+CSS Modules: 컴포넌트별 스타일 격리
+
+Pretendard Font: 한글 최적화 폰트
+
+Backend
+Apollo Server: GraphQL 서버
+
+Next.js API Routes: 서버리스 함수
+
+OpenWeather API: 외부 날씨 데이터
+
+## 🚀 시작하기
+
+1. 저장소 클론
+   
+```
+git clone https://github.com/SongSeungYun/Weather-App.git
+cd Weather-App
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 의존성 설치
+   
+```
+npm install
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+3. 환경 변수 설정
+.env.local 파일 생성:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+OPENWEATHER_API_KEY=your_openweather_api_key_here
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. 개발 서버 실행
+```
+npm run dev
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. 브라우저에서 http://localhost:3000 접속
