@@ -35,7 +35,7 @@ OpenWeather API: 외부 날씨 데이터
 1. 저장소 클론
    
 ```
-git clone https://github.com/SongSeungYun/weather-app.git
+git clone https://github.com/SongSeungYun/Weather-App.git
 cd weather-app
 ```
 
