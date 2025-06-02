@@ -14,7 +14,7 @@ OpenWeather API를 통해 실시간 날씨 정보를 제공하는 웹 애플리�
 아코디언 UI: 날짜별 예보 펼치기/접기 기능
 
 ## 🛠️ 기술 스택
-Frontend
+### Frontend
 Next.js 12: React 프레임워크, 파일 기반 라우팅
 
 Apollo Client: GraphQL 클라이언트, 상태 관리
@@ -23,7 +23,7 @@ CSS Modules: 컴포넌트별 스타일 격리
 
 Pretendard Font: 한글 최적화 폰트
 
-Backend
+### Backend
 Apollo Server: GraphQL 서버
 
 Next.js API Routes: 서버리스 함수
